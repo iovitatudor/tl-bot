@@ -1,6 +1,6 @@
 const TelegramBot = require('node-telegram-bot-api');
 
-const token = "6894605231:AAHhMrGjVjcHCtEdVda9308cvYt6s2sWmvc\n";
+const token = "6894605231:AAHhMrGjVjcHCtEdVda9308cvYt6s2sWmvc";
 const bot = new TelegramBot(token, {polling: true});
 const timeTG = "https://front.time.cheap";
 
