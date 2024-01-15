@@ -1,23 +1,13 @@
 const TelegramBot = require('node-telegram-bot-api');
 
-// const token = "6894605231:AAHhMrGjVjcHCtEdVda9308cvYt6s2sWmvc";
-const token = "6650480986:AAExdSrX_eEFOL66UFz5DIv5p_K8MeO05dU";
+const token = "6894605231:AAHhMrGjVjcHCtEdVda9308cvYt6s2sWmvc";
 const bot = new TelegramBot(token, {polling: true});
 const timeTG = "https://front.time.cheap?v=2";
-const testTimeTG = "http://localhost:3000";
 
 bot.on('message', async (msg) => {
     const chatId = msg.chat.id;
     const message = msg.text;
     if (message === "/start") {
-
-        await bot.sendMessage(chatId, "Test TimeCoin Lottery", {
-            reply_markup: {
-                inline_keyboard: [
-                    [{text: 'Go to TimeCoin Lottery', web_app: {url: testTimeTG}}]
-                ],
-            }
-        })
         await bot.sendMessage(chatId, "TimeCoin Lottery", {
             reply_markup: {
                 inline_keyboard: [
